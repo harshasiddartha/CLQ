@@ -1,4 +1,4 @@
-import { CompanyQuestions } from '@/components/CompanyQuestions'
+import  CompanyQuestions  from '../../components/CompanyQuestions'
 
 export default function QuestionsPage() {
   return (

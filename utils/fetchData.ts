@@ -14,7 +14,7 @@ export async function fetchQuestions(): Promise<Question[]> {
   const csvText = await response.text();
   
   return new Promise((resolve, reject) => {
-    Papa.parse(csvText, {
+    Papa.parse<Question>(csvText, {
       header: true,
       complete: (results) => {
         const validQuestions = (results.data as Question[]).filter(q => 
@@ -25,10 +25,9 @@ export async function fetchQuestions(): Promise<Question[]> {
         );
         resolve(validQuestions);
       },
-      error: (error) => {
+      error: (error: Error) => {
         reject(error);
       }
     });
   });
 }
-

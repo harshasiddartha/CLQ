@@ -1,14 +1,14 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import InterviewExperienceDetails from '@/components/InterviewExperienceDetails'
 import { LeetCodeExperience } from '@/utils/csvParser'
 import { Loader2 } from 'lucide-react'
 
 export default function InterviewExperienceDetailsPage() {
   const params = useParams()
-  const router = useRouter()
+  // const router = useRouter()
   const [experience, setExperience] = useState<LeetCodeExperience | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)

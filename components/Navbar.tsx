@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code2Icon, HomeIcon, BookmarkIcon, BriefcaseIcon, MessageCircleIcon } from 'lucide-react'
+import { Code2Icon,  BookmarkIcon, BriefcaseIcon, MessageCircleIcon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 export function Navbar() {

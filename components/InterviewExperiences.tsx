@@ -26,7 +26,7 @@ export default function InterviewExperiences() {
 
   useEffect(() => {
     loadExperiences(true)
-  }, [])
+  }, [loadExperiences])
 
   async function loadExperiences(reset: boolean = false) {
     try {
